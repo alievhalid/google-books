@@ -1,0 +1,23 @@
+
+body {
+    overflow-x: hidden;
+}
+.main-image {
+    background-image: url('./img/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 80vh;
+}
+.filter:after {
+    background-color: rgba(0, 0, 0, 0,4);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
