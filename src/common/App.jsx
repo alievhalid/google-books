@@ -104,7 +104,7 @@ function App() {
     );
   };
   const handleCards = () => {
-    const items = cards.map((item, i) => {
+    const items = cards.map((item) => {
       let thumbnail = "";
       if (item.volumeInfo.imageLinks.thumbnail) {
         thumbnail = item.volumeInfo.imageLinks.thumbnail;

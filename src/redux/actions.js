@@ -5,9 +5,10 @@ export const loadBooks = (query, maxResults, startIndex, KEY, select) => {
     dispatch({
       type: "books/load/start",
     });
+    console.log(select);
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}&volumeInfo.categories${[select]}&order_By=newest&${KEY}}`
+        `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}&order.By=newest&${KEY}}`
       )
       .then((res) => {
         if (startIndex >= res.data.totalItems || startIndex < 1) {
